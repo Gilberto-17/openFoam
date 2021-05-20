@@ -1,0 +1,5 @@
+foamSetupCHT | tee log.foamSetupCHT
+decomposePar -allRegions -dict system/decomposeParDict | tee log.decomposePar
+mpirun -np 4 chtMultiRegionFoam -parallel | tee log.chtMultiRegionFoam
+reconstructPar -allRegions | tee log.reconstructPar
+paraFoam -touchAll

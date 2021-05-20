@@ -1,0 +1,4 @@
+blockMesh |  tee log.blockMesh
+checkMesh | tee log.checkMesh
+topoSet | tee log.topoSet
+splitMeshRegions -cellZonesOnly -overwrite | tee log.splitMeshRegions
